@@ -7,6 +7,20 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="440*"/>
+            <ColumnDefinition Width="259*"/>
+            <ColumnDefinition Width="101*"/>
+        </Grid.ColumnDefinitions>
+        <TextBox x:Name="txboxBiennioTriennio" HorizontalAlignment="Left" Margin="280,64,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Height="18" TextChanged="TextBox_TextChanged"/>
+        <Button Content="controllo Biennio/Triennio" HorizontalAlignment="Left" Margin="10,58,0,0" VerticalAlignment="Top" Height="24" Width="254" RenderTransformOrigin="0.479,0.582"/>
+        <ListView x:Name="listStudenti" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="39,83,39,62" Grid.Column="1">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn/>
+                </GridView>
+            </ListView.View>
+        </ListView>
 
     </Grid>
 </Window>
