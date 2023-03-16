@@ -12,5 +12,5 @@ namespace ScuolaRecuperoGit
         public int OrarioApertura { get; set; }
         public int OrarioChiusura { get; set; }
         public List<Alunno> Alunni { get; set; } // Alunno sarà visto quando faremo il merge
-    }
+    } //tutto bene
 }
