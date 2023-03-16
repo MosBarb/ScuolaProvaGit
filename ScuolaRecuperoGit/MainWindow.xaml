@@ -7,20 +7,37 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="53*"/>
+            <RowDefinition Height="164*"/>
+        </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="440*"/>
+            <ColumnDefinition Width="275*"/>
+            <ColumnDefinition Width="116*"/>
+            <ColumnDefinition Width="0*"/>
+            <ColumnDefinition Width="49*"/>
             <ColumnDefinition Width="259*"/>
             <ColumnDefinition Width="101*"/>
         </Grid.ColumnDefinitions>
-        <TextBox x:Name="txboxBiennioTriennio" HorizontalAlignment="Left" Margin="280,64,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Height="18" TextChanged="TextBox_TextChanged"/>
-        <Button Content="controllo Biennio/Triennio" HorizontalAlignment="Left" Margin="10,58,0,0" VerticalAlignment="Top" Height="24" Width="254" RenderTransformOrigin="0.479,0.582"/>
-        <ListView x:Name="listStudenti" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="39,83,39,62" Grid.Column="1">
+        <TextBox x:Name="txboxBiennioTriennio" HorizontalAlignment="Left" Margin="5,64,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Height="18" TextChanged="TextBox_TextChanged" Grid.Column="1" Grid.ColumnSpan="3"/>
+        <Button Content="controllo Biennio/Triennio" HorizontalAlignment="Center" Margin="0,58,0,0" VerticalAlignment="Top" Height="24" Width="254" RenderTransformOrigin="0.479,0.582" Click="Button_Click"/>
+        <ListView x:Name="listStudenti" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="10,10,10,10" Grid.Column="4" Grid.Row="1">
             <ListView.View>
                 <GridView>
                     <GridViewColumn/>
                 </GridView>
             </ListView.View>
         </ListView>
+        <Button x:Name="btnAggiungiAlunno" Content="Aggiungi Alunno" HorizontalAlignment="Left" Margin="10,32,0,0" VerticalAlignment="Top" Grid.Row="1" Height="20" Width="94" Click="btnAggiungiAlunno_Click"/>
+        <TextBox x:Name="txboxNomeAlunno" HorizontalAlignment="Left" Margin="31,79,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Nome" VerticalAlignment="Top" Width="120" Height="18"/>
+        <TextBox x:Name="txboxCognomeAlunno" HorizontalAlignment="Left" Margin="31,122,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Cognome" VerticalAlignment="Top" Width="120" Height="18"/>
+        <TextBox x:Name="txboxetàAlunno" HorizontalAlignment="Left" Margin="31,0,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Età" VerticalAlignment="Center" Width="120" Height="18"/>
+        <TextBox x:Name="txboxCittàAlunno" HorizontalAlignment="Left" Margin="31,189,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Città" VerticalAlignment="Top" Width="120" Height="18"/>
+        <Button x:Name="btnCercaAlunno" Grid.Column="1" Content="cerca alunno" HorizontalAlignment="Center" Margin="0,27,0,0" Grid.Row="1" VerticalAlignment="Top" Width="118" Click="btnCercaAlunno_Click" Grid.ColumnSpan="3" Height="20"/>
+        <TextBox x:Name="txboxEtàCercare" HorizontalAlignment="Left" Margin="263,79,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Età da cercare" VerticalAlignment="Top" Width="120" Grid.ColumnSpan="2" Height="18"/>
+        <TextBox x:Name="txboxCognomeCercare" HorizontalAlignment="Left" Margin="263,111,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Cognome da cercare" VerticalAlignment="Top" Width="120" Grid.ColumnSpan="2" Height="18"/>
+        <CheckBox x:Name="CheckboxPresenza" Grid.Column="4" Content="Presenza Alunno" HorizontalAlignment="Left" Margin="10,80,0,0" VerticalAlignment="Top" Height="16" Width="127"/>
+        <TextBox x:Name="studente_trovato" Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="261,146,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.716,0.463"/>
 
     </Grid>
 </Window>
